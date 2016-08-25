@@ -1964,7 +1964,7 @@ int iso14443a_select_card(byte_t *uid_ptr, iso14a_card_select_t *p_hi14a_card, u
 	}
 
 	// non iso14443a compliant tag
-	if( (sak & 0x20) == 0) return 2; 
+	return 2; 
 
 	// Request for answer to select
 	AppendCrc14443a(rats, 2);
